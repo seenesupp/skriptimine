@@ -1,0 +1,10 @@
+#!/bin/bash
+#kymne plussi trykkimine
+for i in  {1..10}
+do
+	for i in {1..10}
+	do
+		echo -n "+"
+	done
+ 	echo
+done
