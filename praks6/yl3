@@ -1,0 +1,25 @@
+#!/bin/bash
+#Loop that creates x rows and x * next to them from user input.
+
+#Run a loop from 1-5
+ridad=0
+tarnid=0
+
+#Asking for rows and *
+echo -n "Sisesta ridade arv: "
+
+read ridad
+
+echo -n "Sisesta tarnide arv: "
+
+read tarnid
+
+for ((i= 1; i <= ridad; i++)) #First loop to run the x rows
+do
+	echo -n "$i."
+	for ((a = 1; a <= tarnid; a++)) #Second loop to run the x *
+	do
+	echo -n "*"
+	done
+echo ""
+done
