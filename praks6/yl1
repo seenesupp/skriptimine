@@ -1,0 +1,14 @@
+#!/bin/bash
+#Script which runs a loop inside a loop which goes from numbers 1-5.
+#Hence it makes 1-5 5 times.
+
+
+for (( i = 1; i <= 5; i++ )) #First loop which runs the loop inside it 5 times.
+do
+	for (( j = l; j <= 5; j++ )) #Second loop that creates the numbers from 1-5.
+	do
+		echo -n "$i"
+	done
+	echo "" #For adding a new line.
+done
+#End of the script
