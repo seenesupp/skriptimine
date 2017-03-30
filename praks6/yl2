@@ -1,0 +1,15 @@
+#!/bin/bash
+#Loop that creates 5 rows and 5 * next to them.
+
+#Run a loop from 1-5
+for i in {1..5}
+do
+	echo -n "$i."
+	for(( j = l; j <= 4; j++ )) #A loop which writes the * 5 times.
+	do
+		echo -n "*"
+	done
+echo ""
+done
+
+#Script end
