@@ -5,17 +5,17 @@
 #ülemine pool
 echo -n "Sisesta ridade arv: "
 read ridade_arv
-for((r=$ridade_arv; r>0; r--))
+for((r=1; r<$(($ridade_arv)); r++))
 do
    #veerud - tärnid
    for((t=1; t<$r; t++))
    do
-     echo -n "o "
+     echo -n "* "
    done
 
-  for((t=1; t<$(($ridade_arv - $r + 2)); t++))
+  for((t=1; t<$(($ridade_arv - $r + 1)); t++))
   do
-    echo -n "* "
+    echo -n "o "
   done
   echo #reavahetus
 done
