@@ -3,7 +3,9 @@
 #kolmnurk
 #
 #ülemine pool
-for((r=4; r>0; r--))
+echo -n "Sisesta ridade arv: "
+read ridade_arv
+for((r=$ridade_arv; r>0; r--))
 do
    #veerud - tärnid
    for((t=1; t<$r; t++))
@@ -11,7 +13,7 @@ do
      echo -n "o "
    done
 
-  for((t=1; t<$((4 - $r + 2)); t++))
+  for((t=1; t<$(($ridade_arv - $r + 2)); t++))
   do
     echo -n "* "
   done
