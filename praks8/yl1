@@ -9,6 +9,7 @@ read algus
 echo -n "Sisesta lopp: "
 read lopp
 
+echo -n > ping_tulemus
 #sisestame alguse ja lõpu
 for ((nr=$algus; nr<=$lopp; nr++))
 #for ip in 172.23.13.{$algus..$lopp}
@@ -19,8 +20,8 @@ do
     #kontrollime ping käsu tulemust, kas läks läbi
     if [ $? -eq 0 ]; then
     #kui $? on 0 - korras
-    echo "$ip - ok"
+    echo "$ip - ok" >> ping_tulemus
   else
-    echo "$ip - not ok"
+    echo "$ip - not ok" >> ping_tulemus
   fi #skripti lõpp
 done
