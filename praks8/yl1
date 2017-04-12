@@ -4,5 +4,13 @@
 #for((nr=1; nr<=10; nr++))
 for ip in 172.23.13.{20..50}
 do
-    echo $ip
+    #teostame antud ip pingi
+    ping -c 1 $ip > /dev/null #väljundid on kustutatud
+    #kontrollime ping käsu tulemust, kas läks läbi
+    if [ $? -eq 0 ]; then
+    #kui $? on 0 - korras
+    echo "$ip - ok"
+  else
+    echo "$ip - not ok"
+  fi #skripti lõpp
 done
