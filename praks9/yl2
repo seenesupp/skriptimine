@@ -1,0 +1,18 @@
+#!/bin/bash
+#Vastavalt kellaajale tervitab
+
+kell='date | cut -c12-13'
+
+if [ $kell -ge 6 -a $kell -le 12 ]; then
+    echo "Tere hommikust"
+elif [ $kell -ge 13 -a $kell -le 18 ]; then
+    echo "Tere päevast"
+elif [ $kell -ge 18 -a $kell -le 22 ]; then
+    echo "Tere õhtust"
+elif [ $kell -ge 22 -a $kell -le 24 ] || [ $kell -gt 0 -a $kell -le 6 ]; then
+    echo "Head ööd"
+else
+    echo "Ebasobilik number"
+fi
+
+#skripti lõpp
