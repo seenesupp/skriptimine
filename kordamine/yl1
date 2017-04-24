@@ -1,0 +1,28 @@
+#!/bin/bash
+#failide loomine
+#
+echo -n "Sisesta vahemiku algus: "
+read algus
+echo -n "Sisesta vahemiku lõpp: "
+read lopp
+#
+#
+#loome failide
+for((nr=$algus; nr <= $lopp; nr++))
+do
+   failinimi="fail$nr"
+   if [ -f $failinimi ]; then
+      echo "Faili nimi juba kasutusel"
+      echo "Kas soovid kustutada antud faili? y/n"
+      read vastus
+      if [ "$vastus" = "y" ]; then
+         rm $failinimi
+         touch $failinimi
+         echo "$failinimi on uue failina"
+      else
+         echo "$failinimi on jäänud vana failina"
+      fi
+   else
+      touch $failinimi
+   fi
+done
