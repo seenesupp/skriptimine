@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#trükime menüü
+echo "1 - lihtsalt loon faili vastava nimega"
+echo "2 - loon vastava faili ja teen nano-ga lahti"
+echo "3 - väljun programmist"
+echo
+echo -n "Sisestage oma valik: "
+read valik
+#
+if [ $valik -eq 1 ]; then
+    echo -n "Sisetage failinimi: "
+    read failinimi
+    touch $failinimi
+elif [ $valik -eq 2 ]; then
+      echo -n "Sisestage failinimi: "
+      read failinimi
+      touch $failinimi
+      nano $failinimi
+elif [ $valik -eq 3 ]; then
+      exit
+else
+      echo "Antud valik menüüs puudub"
+fi
